@@ -1,22 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- css -->
-
-    <title>Document</title>
+    <link rel="stylesheet" href="css/css_home/style.css">
+    <link rel="shortcut icon" href="img/fivicon.ico" type="image/x-icon">
+    <title>Caça Fantasma SENAI</title>
 </head>
+
 <body>
+    <div class="box_central">
+        <canvas class="canva_fantasma" width="280" height="271" id="tabuleiroCanvas"></canvas>
 
-    <!-- <h1>canva</h1> -->
+        <div class="box_interacao">
 
-    <canvas width="500" height="500" id="tabuleiroCanvas"></canvas> <!-- Tela vazia -->
+            <div class="box_logo">
+                <img src="img/Logo_Caça_Fantasma_SENAI.png" alt="">
+            </div>
 
-    <script src="js/script.js"></script>
+            <div class="box_pesquisa">
+
+                <form>
+                    <p class="titulo_box_pesquisa">Digite Na Caixa De Texto Abaixo A Temperatura Registrada</p>
+                    <br>
+                    <p>
+                        <input class="inputProcurarTexto" type="number" min="-15" max="45" placeholder="Temperatura °C"
+                            id="inTemperatura" required />
+
+                        <input class="inputProcurarButton" type="submit" onclick="procurar(); return false" />
+                    </p>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="carrossel">
+            <div class="container" id="img">
+              <img
+                class="img_fantasmas"
+                src="img/Rainha do Gelo.png"
+              />
+              <img
+                class="img_fantasmas"
+                src="img/Alucinógena.png"
+              />
+              <img
+                class="img_fantasmas"
+                src="img/Fantasminha Camarada.png"
+              />
+              <img 
+                class="img_fantasmas"
+                src="img/Cavaleiro da Danação.png"
+              />
+              
+            </div>
+        </div>
+    </div>
+
+    <script src="js/js_home/script_procura.js"></script>
+    <script src="js/js_home/script_carrosel_img.js"></script>
+    <script src="js/js_home/script_canva.js"></script>
 </body>
+
 </html>
