@@ -8,7 +8,7 @@ function procurar() {
       location.href = "pag_Alucinogena.html";
     }
     else if (temperatura >= 16 && temperatura <= 34) {
-      location.href = "pag_Fantaminha_camarada.html";
+      location.href = "pag_Gasparzinho.html";
     }
     else if (temperatura >= 35 && temperatura <= 45) {
       location.href = "pag_Cavaleiro_da_danacao.html";
@@ -16,4 +16,4 @@ function procurar() {
     else {
       alert(`${temperatura} inexistente`);
     }
-  }
+  } 

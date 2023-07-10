@@ -74,6 +74,7 @@ body {
     color: rgb(0, 0, 0);
     border-radius: 2%;
     border: none; 
+    cursor: pointer;
 }
 
 .carrossel {
