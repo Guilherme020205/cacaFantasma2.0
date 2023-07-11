@@ -39,7 +39,7 @@ let grid = [
 
 
 // função que desenha o grid.
-function desenhaFantasma(cor, xInicial, yInicial, largura, altura) {
+function desenhaBox(cor, xInicial, yInicial, largura, altura) {
 
     pincel.fillStyle = cor;
     pincel.strokeStyle = "black";
@@ -49,30 +49,23 @@ function desenhaFantasma(cor, xInicial, yInicial, largura, altura) {
     pincel.fill();
     pincel.stroke();
 }
-function desenhaGrid(grid) {
+function desenhaFantasma(grid) {
     for (let linha = 0; linha <= grid.length; linha++) {
 
         for (let coluna = 0; coluna <= grid[linha].length; coluna++) {
 
             if (grid[linha][coluna] === 0) {
-                desenhaFantasma("white", coluna * 10, linha * 10, 10, 10);
+                desenhaBox("white", coluna * 10, linha * 10, 10, 10);
             } else if (grid[linha][coluna] === 1) {
-                desenhaFantasma("black", coluna * 10, linha * 10, 10, 10);
+                desenhaBox("black", coluna * 10, linha * 10, 10, 10);
             } else if (grid[linha][coluna] === 2) {
-                // let colors = ["#FF0C00", "#9B0F0F"];
-                // let cor = 0;
-                // setInterval(function(){
-                //     cor = (cor == (colors.length -1)) ? 0 : cor+1;
-                //     desenhaFantasma("cor", coluna * 10, linha * 10, 10, 10);
-
-                // })
-                desenhaFantasma("red", coluna * 10, linha * 10, 10, 10);
+                desenhaBox("red", coluna * 10, linha * 10, 10, 10);
 
             } else if (grid[linha][coluna] === 3) {
-                desenhaFantasma("gray", coluna * 10, linha * 10, 10, 10);
+                desenhaBox("gray", coluna * 10, linha * 10, 10, 10);
             }
         }
     }
 }
 
-desenhaGrid(grid);
+desenhaFantasma(grid);
